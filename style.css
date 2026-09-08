@@ -205,15 +205,15 @@ main {
 /* ===== HERO SECTION ===== */
 .hero {
   min-height: calc(100vh - var(--header-height));
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 80px;
+  display: flex;
   align-items: center;
   padding: var(--section-padding) 0;
+  gap: 60px;
 }
 
 .hero-content {
   max-width: 680px;
+  flex: 1;
 }
 
 .hero-badge {
@@ -300,23 +300,25 @@ main {
 
 .hero-image {
   position: relative;
+  flex-shrink: 0;
 }
 
 .hero-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 24px;
-  padding: 32px;
+  padding: 20px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
 }
 
 .profile-wrapper {
   position: relative;
-  width: 100%;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, var(--accent) 0%, #fb923c 100%);
-  border-radius: 16px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
   overflow: hidden;
+  border: 4px solid var(--bg-card);
+  box-shadow: 0 0 0 2px var(--border), 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .profile-photo {
@@ -328,14 +330,15 @@ main {
 
 .hero-info {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  padding-top: 20px;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+  padding-top: 16px;
   border-top: 1px solid var(--border-light);
 }
 
 .hero-info span {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -718,20 +721,38 @@ main {
   }
 
   .hero {
-    grid-template-columns: 1fr;
-    gap: 48px;
+    flex-direction: column;
+    gap: 40px;
     min-height: auto;
     padding: 60px 0 80px;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-image {
     order: -1;
-    max-width: 300px;
-    margin: 0 auto;
   }
 
   .hero-card {
-    padding: 20px;
+    padding: 16px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .profile-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-info {
+    justify-content: center;
+    gap: 20px;
   }
 
   .education-grid {
@@ -796,11 +817,18 @@ main {
 
   .hero-actions {
     flex-direction: column;
+    width: 100%;
+    max-width: 300px;
   }
 
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .profile-wrapper {
+    width: 140px;
+    height: 140px;
   }
 
   .section-header {
