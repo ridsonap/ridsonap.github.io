@@ -205,15 +205,15 @@ main {
 /* ===== HERO SECTION ===== */
 .hero {
   min-height: calc(100vh - var(--header-height));
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
   align-items: center;
   padding: var(--section-padding) 0;
-  gap: 60px;
 }
 
 .hero-content {
   max-width: 680px;
-  flex: 1;
 }
 
 .hero-badge {
@@ -300,7 +300,6 @@ main {
 
 .hero-image {
   position: relative;
-  flex-shrink: 0;
 }
 
 .hero-card {
@@ -313,8 +312,8 @@ main {
 
 .profile-wrapper {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid var(--bg-card);
@@ -546,6 +545,18 @@ main {
   font-weight: 600;
   line-height: 1.5;
   transition: color var(--transition-fast);
+  margin-bottom: 8px;
+}
+
+.publication-authors {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.publication-authors .highlight {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .publication-meta {
@@ -721,7 +732,7 @@ main {
   }
 
   .hero {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 40px;
     min-height: auto;
     padding: 60px 0 80px;
@@ -736,6 +747,7 @@ main {
 
   .hero-image {
     order: -1;
+    justify-self: center;
   }
 
   .hero-card {
