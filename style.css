@@ -901,6 +901,30 @@ body.dark-theme .package-badge.cran {
   border: 1px solid rgba(234, 88, 12, 0.25);
 }
 
+.package-badge.webgis {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+body.dark-theme .package-badge.webgis {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+.package-badge.webapp {
+  background: rgba(139, 92, 246, 0.1);
+  color: #7c3aed;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+body.dark-theme .package-badge.webapp {
+  background: rgba(167, 139, 250, 0.15);
+  color: #a78bfa;
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
 .package-authors {
   font-size: 12px;
   color: var(--text-muted);
